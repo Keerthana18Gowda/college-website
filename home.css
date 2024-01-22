@@ -1,0 +1,81 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.navlist{
+    width: 100%;
+    padding: 5px 10vw;
+    font-size: 20px;
+    position: fixed;
+}
+.navlist ul{
+    display: flex;
+    list-style:none;
+}
+.navlist ul li:first-child{
+    flex: 1;
+}
+.navlist ul h4{
+    font-family:serif;
+    color:#f90
+}
+.navlist ul a{
+    margin-left: 20px;
+}
+.navlist ul a:hover{
+    color:#f90;
+}
+.container{
+    width:100%;
+    height: 100vh;
+    padding-top: 20vh;
+    background-image: linear-gradient(#000000c3,#000000c3),url(c:/Users/Keerthana/Pictures/grad.jpg);
+    text-align: center;
+    color: lightgrey;
+}
+.container h1{
+    font-family:serif;
+    margin bottom: 30px;
+    word spacing:5px;
+}
+.container p{
+    margin-bottom: 30px;
+    letter-spacing: 2px;
+
+}
+.container button{
+    padding: 10px;
+    background:none;
+    border: 1px solid #f90;
+ 
+}
+a{
+    color:#fff;
+    text-decoration: none;
+}
+.container button:hover{
+    background: #f90;
+}
+
+.marq {
+    padding-top:30px;
+    padding-bottom:30px;
+}
+.bms1 {
+    font-size:15px;
+    font-weight:bold;
+    color:white;
+    text-align:start;
+}
+.bms2{
+    float: left;
+	padding-bottom: 10px;
+	padding-top: 10px;
+	text-align:right;
+	bottom: 0px;
+	width: 100%;
+    background: grey;
+}

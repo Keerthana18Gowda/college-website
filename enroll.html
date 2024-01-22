@@ -1,0 +1,231 @@
+<html>
+    <head>
+        <title>Registration Form</title>
+        <style>
+         .background{
+                background-image: url(c:/Users/Keerthana/Pictures/newimage.png); height:100%; width:100%;
+                position:fixed;
+                filter:blur(10px);
+                z-index: -1;
+         }
+            h2{
+                color:black;
+                font-size: 40px;
+                padding-top: 30px;}
+              
+                input{
+                width: 200;
+                height:25;
+                border:2px solid black;
+              }
+              select{
+                width: 200;
+                height:25;
+                background-size: 20px;
+              }
+              .navlist{
+    width: 50%;
+    padding: 15px 27vw;
+    font-size: 20px;
+    position: fixed;
+}
+.navlist ul{
+    display: flex;
+    list-style:none;
+}
+.navlist ul li:first-child{
+    flex: 1;
+}
+.navlist ul h4{
+    font-family:serif;
+    color:orange
+}
+.navlist ul a{
+    margin-left: 60px;
+    color:black
+}
+.navlist ul a:hover{
+    color:orange
+}
+.a{
+    color:black
+    text-decoration: none;
+}
+
+.container button:hover{
+    background: #f90;
+}
+        </style>
+        <!--<style>
+             h2{
+                color: black;
+
+            }
+
+            body{
+            background-color:rebeccapurple;
+            display:flex;
+            justify-content:center;
+            align-items: center;
+            }
+
+            input-box input{
+                width: 100%;
+                height: 100%;
+                background: transparent;
+                border:2px solid rgba(, green, blue, alpha)
+                border-radius:40px;
+            }
+
+           
+
+            
+        </style>-->
+      <!--  <script type = "text/javascript">
+
+            function printError(ID,Msg){
+                document.getElementById(ID).innerHTML=Msg;
+            }
+
+            function validateForm(){
+          
+                var name = document.Form.name.value;
+                var email = document.Form.email.value;
+                var mobile = document.Form.mobile.value;
+                var courses = document.Form.courses.value;
+
+                var nameErr = emailErr = mobileErr = coursesErr = true;
+                
+                if(name==""){
+                    printError("nameErr","please enter your name");
+                    var elem = document.getElementById("name");
+                    elem.classList.add("input-2");
+                    elem.classList.remove("input-1");
+
+                }
+                else{
+                    var regex = /^[a-zA-Z\s]+$/;
+                    if(regex.test(name)==false){
+                        printError("nameErr", "Please enter a valid name"); 
+                        var elem = document.getElementById("name");
+                         elem.classList.add("input-2");
+                         elem.classList.remove("input-1");
+                        }else{
+                        printError("nameErr", ""); 
+                        nameErr = false;
+                        var elem = document.getElementById("name");
+                        elem.classList.add("input-2");
+                        elem.classList.remove("input-1")
+                        }               
+            }
+            if(email==""){
+                    printError("emailErr","please enter your email");
+                    var elem = document.getElementById("email");
+                    elem.classList.add("input-2");
+                    elem.classList.remove("input-1");
+
+                }
+                else{
+                    var regex = /^\S+@\S+\.\S+$/;
+                      if(regex.test(email)==false){
+                       printError("emailErr", "Please enter a valid email"); 
+                        var elem = document.getElementById("email");
+                        elem.classList.add("input-2");
+                        elem.classList.remove("input-1");
+                    }else{
+                            printError("emailErr", ""); 
+                            emailErr = false;
+                            var elem = document.getElementById("email");
+                            elem.classList.add("input-2");
+                            elem.classList.remove("input-1")
+                }
+            }
+            if(mobile==""){
+                    printError("mobileErr","please enter your mobile number");
+                    var elem = document.getElementById("mobile");
+                    elem.classList.add("input-2");
+                    elem.classList.remove("input-1");
+
+                }
+                else{
+                    var regex = /^[1-9]\d{9}$/;
+                      if(regex.test(mobile)==false){
+                       printError("mobileErr", "Please enter a valid 10 digit  mobile number"); 
+                        var elem = document.getElementById("mobile");
+                        elem.classList.add("input-2");
+                        elem.classList.remove("input-1");
+                    }else{
+                            printError("mobileErr", ""); 
+                            mobileErr = false;
+                            var elem = document.getElementById("mobile");
+                            elem.classList.add("input-2");
+                            elem.classList.remove("input-1")
+                }
+            }
+                if(courses=="Select"){
+                    printError("coursesErr","please enter your course name");
+                    var elem = document.getElementById("courses");
+                    elem.classList.add("input-4");
+                    elem.classList.remove("input-3");
+
+                }
+                else{
+                            printError("emailErr", ""); 
+                            coursesErr = false;
+                            var elem = document.getElementById("courses");
+                            elem.classList.add("input-3");
+                            elem.classList.remove("input-4")
+                }
+            if((nameErr || emailErr || mobileErr || coursesErr) == true){
+            return false;
+            }
+        } ;
+        </script>-->
+        
+    </head>
+    <body>
+        <div class="background"></div>
+        <nav class="navlist">
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="Contact.html">Contact</a></li>
+            <li><a href="About.html">About</a></li>
+        </ul>
+        </nav>
+
+        <h2>Registration Form</h2><br><br>
+        <form name="Form" >
+    <div class = "box">
+        <label style="font-size: 28px;"><b>Full Name</label>
+        <input type="text" name="name" id="name" height="85px">
+        <div class="error" id="nameErr"></div> <br><br>
+        <div class = "box">
+            <label  style="font-size: 28px;"><b>Email Address</label>
+            <input type="text" name="email" id="email" height="28px">
+            <div class="error" id="emailErr"></div> <br><br>
+            <div class = "box">
+                <label  style="font-size: 28px;"><b>Mobile Number</label>
+                <input type="text" name="mobile" id="mobile" maxlenght="10"  height="28px">
+                <div class="error" id="mobileErr"></div> <br><br>
+                <div class = "box">
+                    <label  style="font-size: 28px;">Courses</label>
+                    <select name = "courses" id = "courses"  height="35px">
+                        <option aria-setsize="25px">Select </option>
+                        <option>BCA</option>
+                        <option>BCOM</option>
+                        <option>BBA</option>
+                        <option>MCOM</option>
+                        <option>MCA</option>
+                        <option>MBA</option>
+                        
+                        </select>
+                    <div class="error" id="coursesErr"></div> <br><br>
+                    <div class = "box">
+                        <input type = "submit" onsubmit="return validateForm()" value="Submit"  height="28px"> 
+                    </div>
+                    
+        
+    </div></form>
+    </body>
+</html>
